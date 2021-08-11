@@ -12,13 +12,13 @@ export class Utils{
     
     getMachineInfo(): ImachineInfo{
         let parser = new UAParser();
-        let res = parser.getResult();
+        let resInfo = parser.getResult();
         const info: ImachineInfo = {
-            browserName: res.browser.name?? 'Unknown',
-            browserVersion: res.browser.version?? 'Unknown',
-            osName: res.os.name?? 'Unknown',
-            osVersion: res.os.version?? 'Unknown',
-            osVersion2: navigator.platform
+            browserName: resInfo.browser.name?? 'Unknown',
+            browserVersion: resInfo.browser.version?? 'Unknown',
+            osName: resInfo.os.name?? 'Unknown',
+            osVersion: resInfo.os.version?? 'Unknown',
+            osVersion2: navigator.platform?? 'Unknown'
         };
 
         return info;
