@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-import { Utils } from './utils/utils';
-
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +10,7 @@ import { Utils } from './utils/utils';
   imports: [
     BrowserModule
   ],
-  providers: [Utils],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
